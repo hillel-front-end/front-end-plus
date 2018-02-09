@@ -49,11 +49,11 @@
 + MVC Pattern
 + MVP Pattern
 + MVVM Pattern
-## 13-OOP design
+## 13_OOP design
 + Observer, Factory, Decorator, Prototype Patterns
-## 14-Teamwork practice(git flow)
+## 14_Teamwork practice(git flow)
 + сливаем код в мастер
 + rebase vs merge
-## 15-Practice with open API (weather, google maps, статистика или биржа)
-## 16-Practice (Creating library, API)
+## 15_Practice with open API (weather, google maps, статистика или биржа)
+## 16_Practice (Creating library, API)
 
