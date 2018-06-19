@@ -1,10 +1,18 @@
 # front-end-plus
 
+<<<<<<< HEAD
 sychov.saveliy@gmail.com
 
 bblablad (Skype)
 
 (073) 153 79 10
+=======
+(073) 153 79 10
+
+sychov.saveliy@gmail.com
+
+bblablad
+>>>>>>> L_1_hw
 
 ## 01_ES5-6
 + Перебирающие методы
