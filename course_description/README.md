@@ -1,5 +1,11 @@
 # front-end-plus
 
+(073) 153 79 10
+
+sychov.saveliy@gmail.com
+
+bblablad
+
 ## 01_ES5-6
 + Перебирающие методы
 + Области видимости
