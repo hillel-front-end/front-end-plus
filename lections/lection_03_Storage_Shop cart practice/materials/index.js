@@ -22,6 +22,9 @@ app.get('/', function (req, res) {
 app.route('/goods')
 	.get($data.goods);
 
+app.route('/order')
+	.post($data.order);
+
 app.listen(port);
 console.log('Mock server listening on port ' + port);
 

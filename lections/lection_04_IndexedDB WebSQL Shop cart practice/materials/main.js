@@ -16,29 +16,29 @@ console.log('lection_4');
 var list = [
     {
         name: 'Name1',
-        key: 1
+        key: 0
     },
     {
-        name: 'Name2',
-        key: 2
+        name: 'Name2'
     },
     {
         name: 'Name3',
-        key: 3
+        status: 10
     }
 ]
 
 // var request = indexedDB.open("Book_Store", 3);
+// console.log(request);
 
 // request.onerror = ev => console.log(ev);
 // request.onsuccess = ev => {
-//     console.log('success', ev);
+//     // console.log('success', ev);
 // }
 
 // request.onupgradeneeded = function(event){
 //     var db = event.target.result;
 //     var objectStore = db.createObjectStore("books", { keyPath: "name" });
-//     objectStore.createIndex("name", "name", { unique: false });
+//     objectStore.createIndex("name", "status", { unique: false });
 
 //     for (let item of list) {
 //         objectStore.add(item);
@@ -48,7 +48,7 @@ var list = [
 // ----------------------------------
 
 function connectDB(f){
-	var request = indexedDB.open("Goods_DB", 1);
+	var request = indexedDB.open("Goods_DB", 3);
 	request.onerror = function(err){
 		console.log(err);
 	};
@@ -70,38 +70,37 @@ function connectDB(f){
 }
 
 // connectDB(function(db) {
-//     console.log(db);    
+//     // console.log(db);    
 
-//     var transaction = db.transaction(["goods"], "readwrite").objectStore('goods');
+//     var transaction = db
+//                         .transaction(["goods"], "readwrite")
+//                         .objectStore('goods');
 
-//     var customers = [];
+//     var goodsFromDB = [];
 //     console.log(transaction);
 //     transaction.openCursor().onsuccess = function(event) {
-//     var cursor = event.target.result;
-//     if (cursor) {
-//         customers.push(cursor.value);
-//         cursor.continue();
-//     }
-//     else {
-//         console.log("Got all customers: ", customers);
-//     }
+//         var cursor = event.target.result;
+
+//         console.log(cursor);
+//         if (cursor) {
+//             goodsFromDB.push(cursor.value);
+//             cursor.continue();
+//         }
+//         else {
+//             console.log("Got all customers: ", goodsFromDB);
+//         }
 //     };
 // });
 
-// --------------------------------
-
+// -------------------------------- default example
+// var info = {
+//     id: 10,
+//     name: 'FooName'
+// }
 // connectDB(function(db) {
-//     console.log(db);    
-
-//     var transaction = db.transaction(["goods"], "readwrite").objectStore('goods');
-
-//     var customer = {
-//         id: 10,
-//         name: 'FooName'
-//     }
-
-//     transaction.add(customer);
-//     console.log(transaction);
+//     var transaction = db.transaction(["goods"], "readwrite")
+//      .objectStore('goods');
+//     transaction.add(info);
 // });
 
 
@@ -111,7 +110,7 @@ window.onload = function(){
     document
         .querySelector('#image-file')
         .addEventListener('change', function(event){
-            console.log(event, this)
+            console.log(event, this.files[0])
 
             setFile(this.files[0]);
         });
@@ -119,7 +118,9 @@ window.onload = function(){
 
 function setFile(file){
 	connectDB(function(db){
-		var request = db.transaction(['goods'], "readwrite").objectStore('goods').put(file);
+        var request = db
+            .transaction(['goods'], "readwrite")
+            .objectStore('goods').put(file);
 		// request.onerror = ev => console.log(ev);
 		request.onsuccess = function(){
 			return request.result;

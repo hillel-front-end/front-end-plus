@@ -29,5 +29,17 @@ function goods(req, res) {
 		});
 }
 
+function order(req, res) {
+	let path = pathConcat('api' + req.url + '/' + req.method.toLowerCase() + '.json'),
+		servicePromise = filereader(fs, path);
 
-module.exports = { pathConcat, goods };
+	console.log(path);
+	
+	servicePromise
+		.then((response) => {
+			res.json(response);
+		});
+}
+
+
+module.exports = { pathConcat, goods, order };
