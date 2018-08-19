@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 });
 
 app.route('/goods')
-	.get($data.goods);
+	.get($data.goods)
 
 app.route('/order')
 	.post($data.order);
