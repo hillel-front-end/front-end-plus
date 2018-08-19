@@ -31,15 +31,13 @@ bblablad (Skype)
 + Bower - выгружаем библиотеки для работы приложения
 + Gulp - сборка js, css
 + npm - управляем пакетами, организация package.json
-## 06_Modules (+es2015, amd, commonjs)
-+ IIFE
-+ Revealing Module Pattern
-+ AMD and CommonJS Formats
-+ ES2015 Modules
-## 07_Основы NodeJS
+## 06_Основы NodeJS_Express.js примеры
 + запуск простого js файла из консоли
 + организация модулей в NodeJS
 + Разработка mock-server для front-end разработчика
+## 07_
+
+
 ## 08_Express.js на примере mock server. Postman
 + mock-server - заглушки для front-end
 + Postman - управление разработкой API становится проще
