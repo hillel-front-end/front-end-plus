@@ -61,7 +61,9 @@
     <div id="app-7">
         {{ list }}
         <ol>
-            <todo-item v-for="item in list" v-bind:struct="{ id: item, value: value  }">
+            <todo-item 
+                v-for="item in list" 
+                v-bind:struct="{ id: item, value: value  }">
             </todo-item>
         </ol>
     </div>
