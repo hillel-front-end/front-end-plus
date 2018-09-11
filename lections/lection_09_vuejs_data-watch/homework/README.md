@@ -1,8 +1,8 @@
 # Изучить материал
-    +https://ru.vuejs.org/v2/guide/index.html
-    +https://ru.vuejs.org/v2/guide/instance.html
-    +https://ru.vuejs.org/v2/guide/syntax.html
-    +https://ru.vuejs.org/v2/guide/forms.html
++https://ru.vuejs.org/v2/guide/index.html
++https://ru.vuejs.org/v2/guide/instance.html
++https://ru.vuejs.org/v2/guide/syntax.html
++https://ru.vuejs.org/v2/guide/forms.html
 # Практика
 
 Используя материалы -
