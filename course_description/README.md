@@ -31,33 +31,25 @@ bblablad (Skype)
 + Bower - выгружаем библиотеки для работы приложения
 + Gulp - сборка js, css
 + npm - управляем пакетами, организация package.json
-## 06_Основы NodeJS_Express.js примеры
+## 06_Модули
+## 07_Основы NodeJS_Express.js примеры. mock server. Postman
 + запуск простого js файла из консоли
 + организация модулей в NodeJS
 + Разработка mock-server для front-end разработчика
-## 07_
-
-
-## 08_Express.js на примере mock server. Postman
-+ mock-server - заглушки для front-end
-+ Postman - управление разработкой API становится проще
-## 09_Practice (UI+mock server, REST API, JSON design)
-## 10_Unit testing (Karma/Sinon/Chai)
-+ Зачем нужно тестирование
-+ Что такое "common elements"
-+ Karma тестирование
-## 11_OOP design. SOLID
+## 08_vuejs_basics
+## 09_vuejs_data-watch
+## 10_vuejs_cli
+## 11_vuejs_mixins_states_custom-directives
+## 12_Unit tests
+## 13_OOP design. SOLID
 + Constructor, Module, Revealing Module, Singleton Patterns
 + SOLID в JS. Примеры
-## 12_JS MV* Patterns
+## 14_JS MV* Patterns
 + MVC Pattern
 + MVP Pattern
 + MVVM Pattern
-## 13_OOP design
-+ Observer, Factory, Decorator, Prototype Patterns
-## 14_Teamwork practice(git flow)
+## 15_Teamwork practice(git flow)
 + сливаем код в мастер
 + rebase vs merge
-## 15_Practice with open API (weather, google maps, статистика или биржа)
-## 16_Practice (Creating library, API)
+## 16_Practice with open API (weather, google maps, статистика или биржа)
 
