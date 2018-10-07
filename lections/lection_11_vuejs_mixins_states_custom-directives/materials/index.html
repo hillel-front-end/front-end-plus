@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+         {{ message }}
+
+         {{ store.x }}
+<!--
+        <hr>
+
+        {{innerKey}}
+        <hr>
+        {{ x }}
+        <hr>
+
+        {{ someValue }} -->
+
+         <div v-my-directive:name.k="value"></div>
+        <!--<div v-my-directive="{ x: 10, y: 2200 }"></div> -->
+    </div>
+
+    <div id="app2">
+        {{
+            store.x
+        }}
+    </div>
+
+
+    <BannerConfigurator
+        v-bind:type="'desktop'"
+        v-bind:bg="{ desktop: {url: ''}, mobile: {url:''} }"
+        v-bind:title="''"
+        v-bind:price="69"
+        v-bind:btn-title="''" />
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

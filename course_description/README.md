@@ -39,17 +39,15 @@ bblablad (Skype)
 ## 08_vuejs_basics
 ## 09_vuejs_data-watch
 ## 10_vuejs_cli
-## 11_vuejs_mixins_states_custom-directives
-## 12_Unit tests
-## 13_OOP design. SOLID
+## 11_vuejs_practice-message-box
+## 12_vuejs_mixins_states_custom-directives
+## 13_Unit tests
+## 14_OOP design. SOLID
 + Constructor, Module, Revealing Module, Singleton Patterns
 + SOLID в JS. Примеры
-## 14_JS MV* Patterns
+## 15_JS MV* Patterns
 + MVC Pattern
 + MVP Pattern
 + MVVM Pattern
-## 15_Teamwork practice(git flow)
-+ сливаем код в мастер
-+ rebase vs merge
 ## 16_Practice with open API (weather, google maps, статистика или биржа)
 
