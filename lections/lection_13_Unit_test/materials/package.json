@@ -1,0 +1,16 @@
+{
+  "name": "materials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": { 
+    "test": "jasmine" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.2.0",
+    "karma": "^3.0.0"
+  }
+}
