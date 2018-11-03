@@ -42,8 +42,7 @@ bblablad (Skype)
 ## 11_vuejs_practice-message-box
 ## 12_vuejs_mixins_states_custom-directives
 ## 13_Unit tests
-## 14_OOP design. SOLID
-+ Constructor, Module, Revealing Module, Singleton Patterns
+## 14_SOLID
 + SOLID в JS. Примеры
 ## 15_JS MV* Patterns
 + MVC Pattern
