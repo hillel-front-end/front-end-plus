@@ -25,27 +25,30 @@ Interfacer — объект, преобразующий информацию и�
 
 
 // SR principle not observed
-class Person {
-    constructor(name, surname, email) {
-        this.surname = surname;
-        this.name = name;
+// class Person {
+//     constructor(name, surname, email) {
+//         this.surname = surname;
+//         this.name = name;
 
-        if (this.validateEmail(email)) {
-            this.email = email;
-        } else {
-            throw new Error("Invalid email!");
-        }
-    }
-    validateEmail() {
-        var re = /S+@S+.S+/;
-        return re.test(this.email);
-    }
-    greet() {
-        alert("Hi! I'm " + this.name + ". You can reach me at " + this.email);
-    }
-}
+//         if (this.validateEmail(email)) {
+//             this.email = email;
+//         } else {
+//             throw new Error("Invalid email!");
+//         }
+//     }
+//     validateEmail() {
+//         var re = /S+@S+.S+/;
+//         return re.test(this.email);
+//     }
+//     greet() {
+//         alert("Hi! I'm " + this.name + ". You can reach me at " + this.email);
+//     }
+// }
 
 // написать использование
+
+// let per = new Person('name', 'surname', 'sss@ss.com');
+// per.validateEmail();
 
 
 class Person {
@@ -67,13 +70,23 @@ class Email {
             throw new Error("Invalid email!");
         }
     }
-    validateEmail(email) {
-        var re = /S+@S+.S+/;
+    validateEmail(email = this.email) {
+        var re = /\S+@\S+\.\S+/;
         return re.test(email);
+    }
+    static validate(email){
+        this.validateEmail(email);
+    }
+
+    get(){
+        return this.email;
     }
 }
 
 // написать использование
+// let per = new Person('name', 'surname', new Email('sss@ss.com'));
+per.email.validateEmail();
+Email.validate(per.email.get());
 
 
 
@@ -109,8 +122,8 @@ let iceCreamMaker = {
 // подтипов без изменения правильности выполнения программы
 
 var rectangle = {
-    length: 0,
-    width: 0
+    length: 2,
+    width: 20
 };
 
 var square = {};
@@ -118,20 +131,27 @@ var square = {};
     var length = 0, width = 0;
     Object.defineProperty(square, 'length', {
         get: function() { return length; },
-        set: function(value) { length = width = value; }
+        set: function(value) { 
+            length = this.width ? value : width = value;
+        }
     });
     Object.defineProperty(square, 'width', {
         get: function() { return width; },
-        set: function(value) { length = width = value; }
+        set: function(value) { 
+            width = this.length ? value : length = value;
+         }
     });
 })();
+
+square.length = 5;
+// square.width = 7;
 
 var g = function(rectangle) {
     rectangle.length = 3;
     rectangle.width = 4;
     console.log(rectangle.length);
     console.log(rectangle.width);
-    console.log(rectangle.length * rectangle.width);
+    console.log('square = ', rectangle.length * rectangle.width);
 };
 
 
@@ -144,7 +164,8 @@ g(square);
 
 // ISP - The Interface Segregation Principle
 
-// много интерфейсов, специально предназначенных для клиентов, лучше, чем один интерфейс общего назначения
+// много интерфейсов, специально предназначенных для клиентов, лучше, 
+// чем один интерфейс общего назначения
 
 
 
@@ -152,5 +173,6 @@ g(square);
 
 // Зависимость на Абстракциях. Нет зависимости на что-то конкретное
 
-// * Модули верхних уровней не должны зависеть от модулей нижних уровней. Оба типа модулей должны зависеть от абстракций.
+// * Модули верхних уровней не должны зависеть от модулей нижних уровней.
+//  Оба типа модулей должны зависеть от абстракций.
 // * Абстракции не должны зависеть от деталей. Детали должны зависеть от абстракций.
