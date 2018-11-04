@@ -7,9 +7,11 @@ console.log('Lection_14');
 /*
 Стереотипные роли объектов
 
-Information holder — объект, содержащий какую-либо информацию и предоставляющий информацию другим объектам.
+Information holder — объект, содержащий какую-либо информацию и 
+предоставляющий информацию другим объектам.
 
-Structurer — объект, который поддерживает отношения между объектами и хранит информацию об их отношениях.
+Structurer — объект, который поддерживает отношения между объектами и 
+хранит информацию об их отношениях.
 
 Service provider — объект, выполняющий специфичную функцию и предоставляющий ее другим объектам.
 
@@ -75,7 +77,6 @@ class Email {
 
 
 
-
 // OSP - The Open Closed Principle
 
 // программные сущности … должны быть открыты для расширения, но закрыты для модификации.
@@ -92,6 +93,12 @@ let iceCreamMaker = {
   addFlavor(flavor) {
     iceCreamFlavors.push(flavor);
   },
+//   changeFlavor(flavorPos, newVal){
+//     iceCreamFlavors[flavorPos] = newVal;
+//   },
+  removeFlavor(flavorPos){
+    iceCreamFlavors[flavorPos].splice(flavorPos, 1);
+  }
 };
 
 
