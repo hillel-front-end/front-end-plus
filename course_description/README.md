@@ -48,5 +48,5 @@ bblablad (Skype)
 + MVC Pattern
 + MVP Pattern
 + MVVM Pattern
-## 16_Practice with open API (weather, google maps, статистика или биржа)
+## 16_functional_programming
 
